@@ -97,11 +97,12 @@
       background: #0005;
     }
     .modal-content {
+      flex-direction: column;
       background: white;
       margin: auto;
       width: 80%;
       height: 60%;
-      max-width: 400px;
+      max-width: 350px;
       max-height: 650px;
       text-align: center;
     }
@@ -113,6 +114,20 @@
       text-align: left;
       padding-left: 15px;
       padding-right: 15px;
+    }
+    .modal-content h2 {
+      margin-top: 50px;
+    }
+    .btn-in-modal {
+      max-width: 300px;
+    }
+    #close-btn {
+      background: none;
+      border: none;
+    }
+    #close-btn:hover {
+      color: red;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -128,9 +143,9 @@
     <div class="register"><a href="https://wasiatpin.com/?ref=pakeja">DAFTAR</a></div>
   </div>
   <div class="promo">
-    <img src="https://files.catbox.moe/bq5cka.jpg" alt="Promo Undian HP">
+    <img src="https://files.catbox.moe/ghti7i.jpg" alt="Promo Undian HP">
   </div>
-  <div class="modal">
+  <div class="modal" id="modal">
     <div class="modal-content">
       <h2>Cara Ikut Undian HP Mingguan <strong>WASIAT4D</strong></h2>
       <p>
@@ -138,8 +153,30 @@
         <b>2.</b> Lakukan deposit minimal <strong>10 ribu</strong>.<br>
         <b>3.</b> Masuk ke permainan <strong>SLOT PG SOFT</strong> apa saja.<br>
         <b>4.</b> Spin minimal <strong>100x</strong> di nominal berapapun.<br>
+        <b>5.</b> Pemenang akan diundi setiap minggu. Jika menang undian, akan ada notifikasi saat login ke akun.
+        <div class="container btn-in-modal">
+          <div class="login"><a href="https://wasiatpin.com/?ref=pakeja">LOGIN</a></div>
+          <div class="register"><a href="https://wasiatpin.com/?ref=pakeja">DAFTAR</a></div>
+        </div>
       </p>
+      <div class="close-modal">
+          <button type="button" id="close-btn">x close</button>
+      </div>
     </div>
   </div>
+  <script>
+    const modalBtn = document.getElementById("cara");
+    const showModal = document.getElementById("modal");
+    modalBtn.addEventListener("click", function(e) {
+      e.preventDefault();
+      showModal.style.display = "flex";
+    });
+    
+    const closeBtn = document.getElementById("close-btn");
+    closeBtn.addEventListener("click", function(e) {
+      e.preventDefault();
+      showModal.style.display = "none";
+    });
+  </script>
 </body>
 </html>
