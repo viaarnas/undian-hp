@@ -7,11 +7,28 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      background: #002b5c;
+    }
+    @keyframes pulse {
+      0%, 100% {
+        opacitiy: 1;
+      }
+      50% {
+        opacity: 0.4;
+      }
+    }
+    .logo img {
+      display: block;
+      max-width: 400px;
+      max-height: 70px;
+      margin: 10px auto;
+      font-size: 36px;
+      animation: pulse 2s infinite;
     }
     .promo {
       width: 100%;
       max-width: 400px;
-      margin: 25px auto;
+      margin: 10px auto;
     }
     .promo img {
       width: 100%;
@@ -27,23 +44,33 @@
       align-items: center;
       text-align: center;
       gap: 5px;
-      font-size: 21px;
+      font-size: 24px;
+      line-height: 30px;
       margin: 0 auto;
     }
     .login, .register {
       background: #f00;
       width: 50%;
-      border: 3px solid black;
-      border-radius: 5px;
-      height: 25px;
+      border: 3px solid gold;
+      border-radius: 25px;
+      height: 30px;
+      font-weight: bold;
+      box-shadow: 0 1px black;
     }
     a {
       color: white;
       display: block;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #003f95;
     }
   </style>
 </head>
 <body>
+  <div class="logo">
+    <img src="https://wasiatsaya.com/images/logoweb.png" alt="Logo Wasiat4d">
+  </div>
   <div class="container">
     <div class="login"><a href="https://wasiatpin.com/?ref=pakeja">LOGIN</a></div>
     <div class="register"><a href="https://wasiatpin.com/?ref=pakeja">DAFTAR</a></div>
