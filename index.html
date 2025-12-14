@@ -65,13 +65,54 @@
       box-shadow: 0 1px black;
       animation: shake 3s infinite;
     }
-    a {
+    .container a {
       color: white;
       display: block;
-      text-decoration: none;
     }
     a:hover {
       color: #003f95;
+    }
+    .modal-btn {
+      text-align: center;
+      margin: 10px auto;
+      margin-top: -5px;
+    }
+    .modal-btn button {
+      background: none;
+      border: none;
+      color: yellow;
+      font-size: 16px;
+    }
+    .modal-btn button:hover {
+      color: white;
+      cursor: pointer;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: #0005;
+    }
+    .modal-content {
+      background: white;
+      margin: auto;
+      width: 80%;
+      height: 60%;
+      max-width: 400px;
+      max-height: 650px;
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    .modal-content p {
+      text-align: left;
+      padding-left: 15px;
+      padding-right: 15px;
     }
   </style>
 </head>
@@ -79,12 +120,26 @@
   <div class="logo">
     <img src="https://wasiatsaya.com/images/logoweb.png" alt="Logo Wasiat4d">
   </div>
+  <div class="modal-btn">
+    <button type="button" id="cara">Cara Ikut Undian HP Mingguan</button>
+  </div>
   <div class="container">
     <div class="login"><a href="https://wasiatpin.com/?ref=pakeja">LOGIN</a></div>
     <div class="register"><a href="https://wasiatpin.com/?ref=pakeja">DAFTAR</a></div>
   </div>
   <div class="promo">
     <img src="https://files.catbox.moe/bq5cka.jpg" alt="Promo Undian HP">
+  </div>
+  <div class="modal">
+    <div class="modal-content">
+      <h2>Cara Ikut Undian HP Mingguan <strong>WASIAT4D</strong></h2>
+      <p>
+        <b>1.</b> Wajib memiliki akun di <strong><a href="https://wasiatpin.com/?ref=pakeja">WASIAT4D</a></strong>.<br>
+        <b>2.</b> Lakukan deposit minimal <strong>10 ribu</strong>.<br>
+        <b>3.</b> Masuk ke permainan <strong>SLOT PG SOFT</strong> apa saja.<br>
+        <b>4.</b> Spin minimal <strong>100x</strong> di nominal berapapun.<br>
+      </p>
+    </div>
   </div>
 </body>
 </html>
