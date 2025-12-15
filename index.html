@@ -98,12 +98,14 @@
     }
     .modal-content {
       flex-direction: column;
-      background: white;
+      background: #d1d5da;
       margin: auto;
       width: 80%;
       max-height: 80%;
       max-width: 350px;
       text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 1px 10px black;
     }
     a {
       text-decoration: none;
@@ -113,9 +115,6 @@
       text-align: left;
       padding-left: 15px;
       padding-right: 15px;
-    }
-    .modal-content h2 {
-      margin-top: 50px;
     }
     .btn-in-modal {
       max-width: 300px;
@@ -128,6 +127,14 @@
     #close-btn:hover {
       color: red;
       cursor: pointer;
+    }
+    .outline {
+      background: none;
+      height: 90%;
+      width: 90%;
+      margin: 15px auto;
+      border: 4px solid #626364;
+      border-radius: 10px;
     }
   </style>
 </head>
@@ -143,10 +150,11 @@
     <div class="register"><a href="https://wasiatpin.com/?ref=pakeja">DAFTAR</a></div>
   </div>
   <div class="promo">
-    <img src="https://files.catbox.moe/ghti7i.jpg" alt="Promo Undian HP">
+    <img id="gambar" src="https://files.catbox.moe/ghti7i.jpg" alt="Promo Undian HP">
   </div>
   <div class="modal" id="modal">
     <div class="modal-content">
+      <div class="outline">
       <h2>Cara Ikut Undian HP Mingguan <strong>WASIAT4D</strong></h2>
       <p>
         <b>1.</b> Wajib memiliki akun di <strong><a href="https://wasiatpin.com/?ref=pakeja">WASIAT4D</a></strong>.<br>
@@ -162,6 +170,7 @@
       <div class="close-modal">
           <button type="button" id="close-btn">x close</button>
       </div>
+      </div>
     </div>
   </div>
   <script>
@@ -176,6 +185,12 @@
     closeBtn.addEventListener("click", function(e) {
       e.preventDefault();
       showModal.style.display = "none";
+    });
+    
+    const showPic = document.getElementById("gambar");
+    showPic.addEventListener("click", function(e) {
+      e.preventDefault();
+      showModal.style.display = "flex";
     });
   </script>
 </body>
