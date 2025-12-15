@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Undian HP Mingguan</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="logo">
@@ -40,25 +41,7 @@
       </div>
     </div>
   </div>
-  <script>
-    const modalBtn = document.getElementById("cara");
-    const showModal = document.getElementById("modal");
-    modalBtn.addEventListener("click", function(e) {
-      e.preventDefault();
-      showModal.style.display = "flex";
-    });
-    
-    const closeBtn = document.getElementById("close-btn");
-    closeBtn.addEventListener("click", function(e) {
-      e.preventDefault();
-      showModal.style.display = "none";
-    });
-    
-    const showPic = document.getElementById("gambar");
-    showPic.addEventListener("click", function(e) {
-      e.preventDefault();
-      showModal.style.display = "flex";
-    });
+  <script src="script.js">
   </script>
 </body>
 </html>
