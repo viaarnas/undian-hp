@@ -1,3 +1,10 @@
+const link = "https://wasiatpin.com/?ref=pakeja";
+document.querySelectorAll(".links").forEach(function(a) {
+    a.href = link;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+});
+
 const modalBtn = document.getElementById("cara");
 const showModal = document.getElementById("modal");
 modalBtn.addEventListener("click", function(e) {
