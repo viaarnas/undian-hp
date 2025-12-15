@@ -89,6 +89,11 @@
       height: 100%;
       background: #0005;
     }
+    @keyframes pop {
+      0% { transform: translateY(20px); opacity: 0.2; }
+      50% { transform: translateY(10px); opacity: 0.7; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
     .modal-content {
       flex-direction: column;
       background: #d1d5da;
@@ -99,6 +104,7 @@
       text-align: center;
       border-radius: 20px;
       box-shadow: 0 1px 10px black;
+      animation: pop 1.5s ease-out forwards;
     }
     a {
       text-decoration: none;
