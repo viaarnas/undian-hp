@@ -1,0 +1,18 @@
+const modalBtn = document.getElementById("cara");
+    const showModal = document.getElementById("modal");
+    modalBtn.addEventListener("click", function(e) {
+      e.preventDefault();
+      showModal.style.display = "flex";
+    });
+    
+    const closeBtn = document.getElementById("close-btn");
+    closeBtn.addEventListener("click", function(e) {
+      e.preventDefault();
+      showModal.style.display = "none";
+    });
+    
+    const showPic = document.getElementById("gambar");
+    showPic.addEventListener("click", function(e) {
+      e.preventDefault();
+      showModal.style.display = "flex";
+    });
